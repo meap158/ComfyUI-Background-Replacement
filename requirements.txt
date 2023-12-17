@@ -1,0 +1,10 @@
+opencv-python
+transformers
+xformers
+accelerate
+safetensors
+timm
+scikit-image
+realesrgan
+basicsr>=1.4.2
+scipy
