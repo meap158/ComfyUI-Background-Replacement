@@ -26,7 +26,7 @@ You can also load the example workflow by dragging the workflow file (workflow_b
 
 > [!TIP]
 > (Also from Shopify/background-replacement)
-> To use it, upload your product photo (.jpg or .png), then describe the background you’d like to see in place of the original. For best results follow the general pattern in the examples below:
+> - To use it, upload your product photo (.jpg or .png), then describe the background you’d like to see in place of the original. For best results follow the general pattern in the examples below:
 > 1. ❌ _Do not_ describe your product in the prompt (ex: black sneakers)
 > 2. ✅ Do describe the "grounding" for your product (ex: placed on a table)
 > 3. ✅ Do describe the scene you want (ex: in a greek cottage)
