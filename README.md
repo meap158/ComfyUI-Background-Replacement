@@ -31,7 +31,7 @@ You can also load the example workflow by dragging the workflow file (workflow_b
 - **Outputs:**
     - `depth_image`: An image representing the depth map of your source image, which will be used as conditioning for ControlNet.
     - `cropped_image`: The main subject or object in your source image, cropped with an alpha channel.
-- **Parameters**
+- **Parameters:**
     - `depth_map_feather_threshold`: This sets the smoothness level of the transition between the subject and the background. The default is 128, and it ranges from 0 to 255.
     - `depth_map_dilation_iterations`: It determines how much the edges of the background are expanded. The default is 1.
     - `depth_map_blur_radius`: This sets how much the edges of the background are blurred. The default is 5.
@@ -40,7 +40,7 @@ You can also load the example workflow by dragging the workflow file (workflow_b
 - **Inputs:**
     - `background_image`: The main image that serves as the background.
     - `overlay_image`: The image to be placed on top of the background.
-- **Outputs:**
+- **Output:**
     - `composited_image`: The resulting image after combining the background and overlay.
 ---
 > [!NOTE]
