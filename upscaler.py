@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image
 from realesrgan import RealESRGANer
 from basicsr.archs.rrdbnet_arch import RRDBNet
+import torch
 
 upsampler = None
 
@@ -15,7 +16,10 @@ def init(model_path):
     model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64,
                     num_block=23, num_grow_ch=32, scale=2)
 
-    upsampler = RealESRGANer(scale=2, model_path=model_path, model=model, device="cuda")
+    if torch.backends.mps.is_available():
+        upsampler = RealESRGANer(scale=2, model_path=model_path, model=model, device="mps")
+    else:
+        upsampler = RealESRGANer(scale=2, model_path=model_path, model=model, device="cuda")
 
 
 def upscale(image):
