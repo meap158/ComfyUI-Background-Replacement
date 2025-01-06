@@ -66,10 +66,14 @@ def prepare_segmenter_environment():
 
     for file_path in files_to_move:
         destination = os.path.join(base_path, os.path.basename(file_path))
-        shutil.move(file_path, destination)
+        if not os.path.exists(destination):
+            shutil.move(file_path, destination)
+        else:
+            print("segmenter files already exist, ignoring...")
 
     # Delete the entire git directory
-    shutil.rmtree(git_path, ignore_errors=True)
+    #shutil.rmtree(git_path, ignore_errors=True)
+    # no, don't do that - it'll just re-clone it next launch...
 
     return saved_models_path
 
