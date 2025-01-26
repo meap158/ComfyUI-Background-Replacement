@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-background-replacement"
+description = "Instantly replace your image's background."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["opencv-python", "transformers", "xformers", "accelerate", "safetensors", "timm", "scikit-image", "realesrgan", "basicsr>=1.4.2", "scipy"]
+
+[project.urls]
+Repository = "https://github.com/meap158/ComfyUI-Background-Replacement"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Background-Replacement"
+Icon = ""
